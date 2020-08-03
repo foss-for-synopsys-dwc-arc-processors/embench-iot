@@ -489,6 +489,27 @@ __muldi3 (long int a __attribute__ ((unused)),
   return 0;
 }
 
+long int
+__moddi3 (long int a __attribute__ ((unused)),
+	  long int b __attribute__ ((unused)))
+{
+  return 1;
+}
+
+long int
+__divdi3 (long int a __attribute__ ((unused)),
+	  long int b __attribute__ ((unused)))
+{
+  return 0.0;
+}
+
+long long
+__multi3 (long long a __attribute__ ((unused)),
+	  long long b __attribute__ ((unused)))
+{
+  return 0LL;
+}
+
 
 float
 __mulsf3 (float a __attribute__ ((unused)), float b __attribute__ ((unused)))
@@ -919,6 +940,27 @@ __umulhisi3 (unsigned long a __attribute__ ((unused)),
 #undef HIDDEN_FUNC
 #endif /* __arc__ */
 
+
+#ifdef __ARC64__
+
+double
+__floatundidf (unsigned long long i __attribute__ ((unused)))
+{
+  return 0.0;
+}
+
+double
+__floatdidf (long long i __attribute__ ((unused)))
+{
+  return 0.0;
+}
+
+long int
+__fixdfdi (double a __attribute__ ((unused)))
+{
+  return 0;
+}
+#endif
 /*
    Local Variables:
    mode: C
