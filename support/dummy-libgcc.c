@@ -917,6 +917,13 @@ __umulhisi3 (unsigned long a __attribute__ ((unused)),
 #endif /* __llvm__ */
 
 #undef HIDDEN_FUNC
+
+double __powidf2 (double a __attribute__ ((unused)),
+		  int b __attribute__ ((unused)))
+{
+  return 0.0;
+}
+
 #endif /* __arc__ */
 
 /*
